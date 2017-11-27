@@ -215,6 +215,22 @@ function InsertArry2(x,y, arr) {
 // =======================================
 
 function RemoveNegatives(arr) {
-    
+var numNegatives = 0;
+    for (let i = 0; i < arr.length; i++) {        
+        if(arr[i] < 0) {
+            numNegatives++;
+            console.log(numNegatives);    
+        }else {
+           arr[i - numNegatives] = arr[i]; 
+           console.log(arr);
+        }
+    }
+    while (numNegatives--) {
+        arr.pop();
+        console.log(arr);
+    }
+    // console.log(arr);
 }
 // RemoveNegatives([0, -1, 2, -3, 4, -5, 6])
+// =======================================
+
