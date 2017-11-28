@@ -1,23 +1,90 @@
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
 
-<body>
-    <script>
-        function LinearSearch(num, arr) {
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] == num) {
-                    return i;
+    <body>
+        <script>
+
+            function LinearSearch(num, arr) {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] == num) {
+                        return i;
+                    }
+                }
+                return false;
+            }
+    // ==========================================================
+
+            //RECURSION
+            function rSum(n) {
+                if (n === 1) {
+                    return 1;
+                } else {
+                    return rSum(n - 1) + n;
                 }
             }
-            return false;
-        }
-    </script>
-</body>
+
+            //ITERATION
+            function iSum(num) {
+                var sum = 0;
+                for (let i = 1; i <= num; i++) {
+                    sum += i;
+                }
+                return sum;
+            }
+    // ==========================================================
+            
+            //ITERATION
+            function iFactorial(num) {
+                var result = 1;
+                for (let i = 1; i <= num; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+            
+            //RECURSION
+            function rFactorial(num) {
+                if(num === 0) {
+                    return 0;
+                }
+                else if(num === 1) {
+                    return 1;
+                } 
+                else {
+                    return num * rFactorial(num - 1);
+                }
+            }           
+    // ==========================================================
+
+            //ITERATION
+            function iFibonacci(num) {
+                var fib = [0,1];
+                for (let i = 0; i < num; i++) {
+                    fib.push(fib[0] + fib[1]);
+                    //without using fib.shift();
+                    fib[0] = fib[1];
+                    fib[1] = fib[1+1];
+                    fib.pop();
+                }
+                return fib[0];
+            }    
+
+            //RECURSION
+            function rFibonacci(num) {
+                if(num === 1 || num === 2) {
+                    return 1;
+                } else {
+                    return rFibonacci(num - 1) + rFibonacci(num - 2);
+                }
+            }
+        </script>
+    </body>
 
 </html>
