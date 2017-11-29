@@ -242,6 +242,12 @@ function LinearSearch(num, arr) {
     }
     return false;
 }
-LinearSearch(8, [24, 8, 23, 3])
-LinearSearch(99, [24, 8, 23, 3])
+// LinearSearch(8, [24, 8, 23, 3])
+// LinearSearch(99, [24, 8, 23, 3])
 // =======================================
+
+function concatStrs(str1, str2) {
+    var newStr = str1.concat(" ", str2);
+    console.log(newStr);
+}
+concatStrs("Concat","strings")
