@@ -16,7 +16,7 @@ function BubbleSort(arr) {
     }
     return arr;
 }
-BubbleSort(arr)
+BubbleSort(arr);
 // ===========================================================
 
 //Selection
@@ -38,14 +38,28 @@ function SelectionSort(arr) {
     }
     return arr;
 }
-SelectionSort(arr)
+SelectionSort(arr);
 // ===========================================================
 
 //Insertion
-function InsertionSort(arr) {
-    
-}
+// function InsertionSort(arr) {
+//     for (let i = 1; i < arr.length; i++) {
+//         var x = i;
+//         while (x > 0 && arr[x - 1] > arr[i]) {
+//             arr[x] = arr[x - 1];
+//             x -= 1;
+//         }
+//         arr[x] = arr[i];
+//     }
+//     return arr;
+// }
+// InsertionSort(arr);
+// ===========================================================
 
 //Merge
+function MergeSort(arr) {
+    
+}
+// ===========================================================
 
 //Quick
