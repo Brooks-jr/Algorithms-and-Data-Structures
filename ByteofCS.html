@@ -87,25 +87,30 @@
         // ==========================================================
 
         //RECURSION
-        function rBinarySearch(arr, key, min, max) {
-            while (min <= max) {
-                var mid = (max + min) / 2 | 0;
+        var arr = [-90, -19, 0, 2, 12, 29, 33, 190, 320];
+        var min = 0;
+        var max = arr.length - 1;
+        var target = 190;
+        var result = rBinarySearch(arr, target, min, max);
 
-                if (key == arr[mid]) {
-                    result = mid;
-                } else if (key < arr[mid]) {
-                    return rBinarySearch(arr, key, min, mid - 1);
-                } else {
-                    return rBinarySearch(arr, key, mid + 1, max);
-                }
+
+        function rBinarySearch(arr, target, min, max) {
+            if (min > max) {
+                return "Target value does not exist in the Array";
             }
-            return -1;
+            var mid = Math.floor((max + min) / 2);
+            if (arr[mid] === target) {
+                return mid;
+            } else if (arr[mid] > target) {
+                return rBinarySearch(arr, target, min, mid - 1);
+            } else {
+                return rBinarySearch(arr, target, mid + 1, max);
+            }
+            return result;
         }
-        // var arr = [-90,-19,0,2,12,29,33,190,320];
-        // var min = 0;
-        // var max = arr.length - 1;
-        // var target = 12;
-        // var result = rBinarySearch(arr, target, min, max);
+
+        rBinarySearch(arr, target, min, max);
+
 
         //ITERATION 
         var arr = [-90, -19, 0, 2, 12, 29, 33, 190, 320];
