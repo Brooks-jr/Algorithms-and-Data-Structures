@@ -18,7 +18,7 @@ function OddNumbers1To1000() {
 
 
 function SumOfOddNumbers1To5000() {
-var sum = 0;
+    var sum = 0;
     for (let i = 1; i < 5001; i++) {
         if (i % 2 === 1) {
             sum += i;
@@ -39,7 +39,7 @@ function IteratingArray(arr) {
 
 
 function FindMaxValue() {
-var max = 0;
+    var max = 0;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max) {
             max = arr[i]
@@ -52,7 +52,7 @@ var max = 0;
 
 
 function FindAverage(arr) {
-var sum = 0;
+    var sum = 0;
     for (let i = 0; i < arr.length; i++) {
         sum += arr[i];
     }
@@ -64,7 +64,7 @@ var sum = 0;
 
 
 function ArrayWithOddNumbers() {
-var newArr = [];
+    var newArr = [];
     for (let i = 1; i < 256; i++) {
         if (i % 2 === 1) {
             newArr.push(i);
@@ -77,8 +77,8 @@ var newArr = [];
 
 
 function GreaterThanY(arr) {
-var Y = 12;
-var count = 0;
+    var Y = 12;
+    var count = 0;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > Y) {
             count++;
@@ -111,9 +111,9 @@ function NegativeToZero(arr) {
 
 
 function MinMaxAverage(arr) {
-var sum = 0;
-var min = arr[0];
-var max = arr[0];
+    var sum = 0;
+    var min = arr[0];
+    var max = arr[0];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] < min) {
             min = arr[i];
@@ -155,7 +155,7 @@ function NegativeToString(arr) {
 
 
 function RandomArray() {
-var randArr = [];
+    var randArr = [];
     for (let i = 0; i < 10; i++) {
         randArr.push(Math.floor(Math.random() * 101));
     }
@@ -166,7 +166,7 @@ var randArr = [];
 
 
 function SwapTwoValues(arr) {
-var temp;
+    var temp;
     temp = arr[0];
     arr[0] = arr[arr.length - 1];
     arr[arr.length - 1] = temp;
@@ -203,10 +203,10 @@ function ReverseArray(arr) {
 // }
 // InsertArray(3, 2, [1, 2, 4, 5] )
 
-function InsertArry2(x,y, arr) {
+function InsertArry2(x, y, arr) {
     arr.push(0);
     for (let i = arr.length - 1; i > y; i--) {
-        arr[i] = arr[i-1];
+        arr[i] = arr[i - 1];
     }
     arr[y] = x;
     console.log(arr);
@@ -215,14 +215,14 @@ function InsertArry2(x,y, arr) {
 // =======================================
 
 function RemoveNegatives(arr) {
-var numNegatives = 0;
-    for (let i = 0; i < arr.length; i++) {        
-        if(arr[i] < 0) {
+    var numNegatives = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
             numNegatives++;
             // console.log(numNegatives);    
-        }else {
-           arr[i - numNegatives] = arr[i]; 
-        //    console.log(arr);
+        } else {
+            arr[i - numNegatives] = arr[i];
+            //    console.log(arr);
         }
     }
     while (numNegatives--) {
@@ -236,7 +236,7 @@ var numNegatives = 0;
 
 function LinearSearch(num, arr) {
     for (let i = 0; i < arr.length; i++) {
-        if(arr[i] == num) {
+        if (arr[i] == num) {
             return i;
         }
     }
@@ -250,4 +250,22 @@ function concatStrs(str1, str2) {
     var newStr = str1.concat(" ", str2);
     console.log(newStr);
 }
-concatStrs("Concat","strings")
+// concatStrs("Concat","strings")
+// =======================================
+
+function intToBinaryString(num1, num2) {
+    var sum = num1 + num2;
+    var result = sum.toString(2);
+
+    while (Math.floor(result.length % 8) !== 0) {
+        result = "0" + result;
+    }
+    return result;
+}
+//   intToBinaryString(2,8)
+
+function intToBinaryStringShort(num1, num2) {
+    return (num1 + num2).toString(2);
+}
+// intToBinaryStringShort(2,8)
+// =======================================
