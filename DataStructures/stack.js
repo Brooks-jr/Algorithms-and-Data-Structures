@@ -13,7 +13,9 @@ var Stack = (function () {
         this.top = this.dataStore.length - 1; 
     }
     Stack.prototype.display = function () {
-        console.log(this.dataStore);
+        this.dataStore.forEach(function(item){
+            console.log(item);
+        });
         console.log("Top is now " + this.dataStore[this.top]);    
     }
     return Stack;
