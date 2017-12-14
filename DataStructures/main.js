@@ -30,3 +30,16 @@ queue.display();
 console.log("Your order is ready, Bird. Next?");
 queue.dequeue();
 queue.display();
+
+//========================================================
+console.log("===========================================");
+//========================================================
+
+/* S L L */
+console.log("* S L L *");
+var SinglyLinkedList = require('./singly-linked-lists')
+var cities = new SinglyLinkedList();
+cities.insert("Los Angeles", "head");
+cities.insert("San Francisco", "Los Angeles");
+cities.insert("Seattle", "San Francisco");
+cities.display();
