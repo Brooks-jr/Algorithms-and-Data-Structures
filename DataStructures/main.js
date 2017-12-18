@@ -42,4 +42,5 @@ var cities = new SinglyLinkedList();
 cities.insert("Los Angeles", "head");
 cities.insert("San Francisco", "Los Angeles");
 cities.insert("Seattle", "San Francisco");
+cities.insert("Chicago", "Los Angeles");
 cities.display();
